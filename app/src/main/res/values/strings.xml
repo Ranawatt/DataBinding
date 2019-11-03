@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DataBinding</string>
+    <string name="likes">Likes</string>
+    <string name="textview">TextView</string>
+    <string name="profile_name">NAME</string>
+    <string name="profile_lastname">LAST NAME</string>
+    <string name="last_name_label">Last name</string>
+    <string name="name_label">Name</string>
+    <string name="profile_avatar_cd">Profile\'s avatar</string>
+
+    <string name="like">Like</string>
+    <string name="start">Start</string>
+    <string name="stop">Reset</string>
+    <string name="pause">Pause</string>
+    <string name="minus_sign">-</string>
+    <string name="plus_sign">+</string>
+    <string name="sets_format">Sets: %d/%d</string>
+    <string name="prefs_timePerWorkSet">SHARED_PREFS_TIMEPERWORKSET</string>
+    <string name="prefs_timePerRestSet">SHARED_PREFS_TIMEPERRESTSET</string>
+    <string name="prefs_numberOfSets">SHARED_PREFS_NUMBEROFSETS</string>
+</resources>

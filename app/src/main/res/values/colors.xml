@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#3f51b5</color>-->
+<!--    <color name="colorPrimaryDark">#303F9F</color>-->
+<!--    <color name="colorAccent">#ff4081</color>-->
+    <color name="popular">#ff76a5</color>
+    <color name="star">#ff0057</color>
+    <color name="colorPrimary">#aed581</color>
+    <color name="colorPrimaryLight">#E1E2E1</color>
+    <color name="colorPrimaryDark">#7da453</color>
+    <color name="colorAccent">#add681</color>
+    <color name="secondaryLightColor">#819ca9</color>
+    <color name="secondaryDarkColor">#29434e</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+    <color name="disabledInputColor">#fffafafa</color>
+</resources>
