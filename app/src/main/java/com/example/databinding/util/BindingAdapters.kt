@@ -1,5 +1,6 @@
 package com.example.databinding.util
 
+import android.content.ContentProvider
 import android.content.Context
 import android.os.Build
 import android.view.View
@@ -12,8 +13,9 @@ import androidx.databinding.BindingAdapter
 import com.example.databinding.R
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
+import android.renderscript.RenderScript
 import android.widget.ImageView
-import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat.getColor
 import androidx.core.widget.ImageViewCompat
 import com.example.databinding.data.Popularity
 
@@ -53,7 +55,7 @@ fun tintPopularity(view: ProgressBar, popularity: Popularity) {
  */
 @BindingAdapter(value = ["app:progressScaled", "android:max"], requireAll = true)
 fun setProgress(progressBar: ProgressBar, likes: Int, max: Int) {
-    progressBar.progress = (likes * max / 5).coerceAtMost(max)
+    progressBar.progress = (likes * max / 5)
 }
 
 /**
@@ -70,21 +72,21 @@ private fun getAssociatedColor(popularity: Popularity, context: Context): Int {
         Popularity.NORMAL -> context.theme.obtainStyledAttributes(
             intArrayOf(android.R.attr.colorForeground)
         ).getColor(0, 0x000000)
-        Popularity.POPULAR -> ContextCompat.getColor(context, R.color.popular)
-        Popularity.STAR -> ContextCompat.getColor(context, R.color.star)
+        Popularity.POPULAR -> context.getColor(R.color.popular)
+        Popularity.STAR -> context.getColor(R.color.star)
     }
 }
 
 private fun getDrawablePopularity(popularity: Popularity, context: Context): Drawable? {
     return when (popularity) {
         Popularity.NORMAL -> {
-            ContextCompat.getDrawable(context, R.drawable.ic_person_black_96dp)
+            context.getDrawable(R.drawable.ic_person_black_96dp)
         }
         Popularity.POPULAR -> {
-            ContextCompat.getDrawable(context, R.drawable.ic_whatshot_black_96dp)
+            context.getDrawable(R.drawable.ic_whatshot_black_96dp)
         }
         Popularity.STAR -> {
-            ContextCompat.getDrawable(context, R.drawable.ic_whatshot_black_96dp)
+            context.getDrawable(R.drawable.ic_whatshot_black_96dp)
         }
     }
 }
@@ -132,7 +134,7 @@ object BindingAdapters {
                 view.setTag(R.id.previous_value, textView.text)
                 textView.text = ""
             } else {
-                if (textView.text.isEmpty()) {
+                if (textView.text.toString()!= null) {
                     val tag: CharSequence? = textView.getTag(R.id.previous_value) as CharSequence
                     textView.text = tag ?: ""
                 }
