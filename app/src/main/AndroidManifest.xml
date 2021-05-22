@@ -16,9 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.SolutionActivity">
-        </activity>
-        <activity android:name=".ui.PlainOldActivity"></activity>
+        <activity android:name=".ui.SolutionActivity">   </activity>
+        <activity android:name=".ui.PlainOldActivity">   </activity>
     </application>
 
 </manifest>
